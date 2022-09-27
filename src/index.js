@@ -52,3 +52,14 @@ function handleSubmit(e) {
     e.preventDefault(); //stop browser from refreshing
     setUpUser(apikey.ariaValueMax, region.value);
 }
+
+function setUpUser (apiKey, regionName){
+    localStorage.setItem('apiKey', apiKey);
+    localStorage.setItem('regionName', regionName);
+
+    loading.style.display = 'block'
+    errors.textContent = '';
+    clearBtn.style.display = 'block';
+
+    displayCarbonUsage(apiKey,regionName)
+}
