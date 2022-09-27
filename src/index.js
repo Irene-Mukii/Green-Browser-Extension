@@ -13,3 +13,7 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 
 
+form.addEventListener('submit', (e)=> handleSubmit(e));
+clearBtn.addEventListener('click', (e)=> reset(e));
+init();
+
