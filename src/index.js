@@ -47,3 +47,8 @@ function reset(e) {
     localStorage.removeItem('regionName');
     init();
 }
+
+function handleSubmit(e) {
+    e.preventDefault(); //stop browser from refreshing
+    setUpUser(apikey.ariaValueMax, region.value);
+}
