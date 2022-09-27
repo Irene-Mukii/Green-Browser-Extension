@@ -38,6 +38,12 @@ function init() {
             results.style.display = 'none';
             form.style.display = 'none';
             clearBtn.style.display = 'block'
-
     }
+};
+
+function reset(e) {
+    e.preventDefault();
+    //clear local storage for region only
+    localStorage.removeItem('regionName');
+    init();
 }
